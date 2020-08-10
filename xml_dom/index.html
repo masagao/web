@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div>
+      <h1>Remember these words.</h1>
+      <ul id="wordsList"></ul>
+    </div>
+
+    <script>
+      function loadXMLDoc(url) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, false);
+        xhr.send();
+        return xhr.responseXML;
+      }
+      var xhrDoc = loadXMLDoc("node.xml");
+      var wordNodes = xhrDoc.getElementsByTagName("Word");
+      var wordsList = document.getElementById("wordsList");
+
+      for (var i = 0; i < wordNodes.length; i++) {
+        if (wordNodes[i].getAttribute("isRemember") === "true") {
+          continue;
+        }
+
+        var words = document.createElement("li");
+        words.textContent = wordNodes[i].getElementsByTagName("Title")[0].textContent;
+        words.textContent += wordNodes[i].getElementsByTagName("Meaning")[0].textContent;
+        wordsList.appendChild(words);
+      }
+    </script>
+  </body>
+</html>

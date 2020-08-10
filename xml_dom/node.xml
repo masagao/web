@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wordsToRemember>
+  <Word isRemember="false">
+    <Title>一衣帯水：</Title>
+    <Meaning>隔たりはあるけど近い様</Meaning>
+  </Word>
+
+  <Word isRemember="true">
+    <Title>杜撰：</Title>
+    <Meaning>誤りが多いこと</Meaning>
+  </Word>
+
+  <Word isRemember="false">
+    <Title>動的平衡：</Title>
+    <Meaning>互いに逆向きの過程が同速で進行し、時間変化せず平衡に達している状態</Meaning>
+  </Word>
+</wordsToRemember>
